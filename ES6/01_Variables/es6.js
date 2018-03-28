@@ -15,3 +15,9 @@ if (true) {
 	const i = 0;
 }
 i; // ReferenceError: i is not defined
+
+const obj = {
+	i: 0,
+};
+obj.i = 1;
+obj.i; // 1
