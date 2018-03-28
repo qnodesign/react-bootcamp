@@ -58,3 +58,15 @@ var obj1 = { a, b, c, d };
 ```
 
 Yeah, if the name of the key and the variable we are going to assign to that key are same you can use this shorthand.
+
+### Rest operator:
+
+If the last named argument of a function is prefixed with `...`, it becomes an array whose elements from 0 (inclusive) to theArgs.length (exclusive) are supplied by the actual arguments passed to the function.
+
+```javascript
+function f(a, b, ...theArgs) {
+	// ...
+}
+```
+
+In the above example, theArgs would collect the third argument of the function (because the first one is mapped to a, and the second to b) and all the consecutive arguments.

@@ -53,3 +53,9 @@ Each release brings updates and new features to the language.
 * Initial Editions of ECMAScript are named numerically, increasing by 1: ES1, ES2, ES3, ES4, ES5
 * New editions (starting with 2015) will be named ES followed by the year of release: ES2015, ES2016, ES2017
 * ECMAScript is a standard. JavaScript is the most popular implementation of that standard. Other implementations include: SpiderMonkey, V8, and ActionScript.
+
+## Sources:
+
+https://codeburst.io/es5-vs-es6-with-example-code-9901fa0136fc
+https://hackernoon.com/js-var-let-or-const-67e51dbb716f
+https://codeburst.io/javascript-wtf-is-es6-es8-es-2017-ecmascript-dca859e4821c
