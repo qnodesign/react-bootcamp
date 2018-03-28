@@ -1,49 +1,69 @@
-## Promises vs Callbacks
+## Exporting & Importing Modules
 
-Javascript is an Async language we all know that. This feature gives us a lot of freedom when we write code. We have a non-blocking architecture in our hand because of which we can write non-dependent code easily.
-
-Here is an example how we write an Async function in ES5
+exporting and importing module syntax changed completely with the introduction of ES6 specification. Let’s take a look how we export a module in ES5
 
 ```javascript
-function isGreater(a, b, cb) {
-	var greater = false;
-	if (a > b) {
-		greater = true;
-	}
-	cb(greater);
-}
-isGreater(1, 2, function(result) {
-	if (result) {
-		console.log('greater');
-	} else {
-		console.log('smaller');
-	}
-});
-```
-
-Above we defined a function named isGreater , which takes three arguments a , b and cb . When executed the function check if a greater than b and make the greater variable true , if not greater stays false . After that isGreater calls the callback function cb and pass the greater variable as the argument to the function.
-
-In the next piece of code we call the isGreater function pass it a andb alongside our callback function. Inside callback function we check if the result is true or false and shows message according to it. Now let’s see how ES6 have handled this.
-
-```javascript
-const isGreater = (a, b) => {
-	return new Promise((resolve, reject) => {
-		if (a > b) {
-			resolve(true);
-		} else {
-			reject(false);
-		}
-	});
+var myModule = {
+	x: 1,
+	y: function() {
+		console.log('This is ES5');
+	},
 };
-isGreater(1, 2)
-	.then(result => {
-		console.log('greater');
-	})
-	.catch(result => {
-		console.log('smaller');
-	});
+module.exports = myModule;
 ```
 
-The ES6 Promises allows us to resolve and reject a request. Whenever we resolve a request it will call the callback provided in then and whenever we reject a request it will call the catch callback.
+Here is the ES6 implementation
 
-The ES6 promises are better then callback because it allows us to distinguish easily between a success and error so we don’t have to check again for things in our callback function.
+```javascript
+const myModule = {
+	x: 1,
+	y: () => {
+		console.log('This is ES5');
+	},
+};
+export default myModule;
+```
+
+The ES6 syntax is more readable here. Alongside the export keyword ES6 also comes up with export default later on this firstly let’s take a look how importing a module changed in ES6.
+
+Here is the ES5 version
+
+```javascript
+var myModule = require('./myModule');
+```
+
+Here is the ES6 version
+
+```javascript
+import myModule from './myModule';
+```
+
+Cool ha !!
+
+### The export default:
+
+When you export something using default we will import a module like this.
+
+```javascript
+import myModule from './myModule';
+```
+
+The above line means something like this, we exported a module by default and we have to import that whole module in your source file.
+
+But ES6 also provides us with an ability to export and import multiple child modules or variables from a single module.
+
+So in your module file you will export your module something like this
+
+```javascript
+export const x = 1;
+export const y = 2;
+export const z = 'String';
+```
+
+And import them something like this
+
+```javascript
+import { x, y, z } from './myModule';
+```
+
+Here we used ES6 object destruction to import multiple child modules from one single module.
