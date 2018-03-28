@@ -1,3 +1,7 @@
+//import
+
+var myModule = require('./myModule');
+
 //export
 
 var myModule = {
