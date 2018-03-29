@@ -1,3 +1,3 @@
 # React-bootcamp training material
 
-## Week2
+## Week 1 Day 2
