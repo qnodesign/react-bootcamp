@@ -12,6 +12,8 @@ var myModule = {
 module.exports = myModule;
 ```
 
+For more detils please read: [CommonJS.md](./CommonJS.md)
+
 Here is the ES6 implementation
 
 ```javascript
