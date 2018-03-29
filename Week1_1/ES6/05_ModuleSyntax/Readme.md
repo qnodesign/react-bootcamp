@@ -69,3 +69,6 @@ import { x, y, z } from './myModule';
 ```
 
 Here we used ES6 object destruction to import multiple child modules from one single module.
+
+Link: [MDN - Export](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export)
+Link: [MDN - Import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)

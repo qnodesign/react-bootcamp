@@ -1,4 +1,6 @@
-## var, let, or const?
+# var, let, or const?
+
+## ES5
 
 ### Review: Variable Declarations
 
@@ -14,7 +16,8 @@ foo(); // inside
 console.log(x); // outside
 ```
 
-Above code properly declares x both outside and inside the function using var. What happens without var?
+Above code properly declares x both outside and inside the function using var.
+What happens without var?
 
 ```javascript
 x = 'outside';
@@ -26,7 +29,7 @@ foo(); // inside
 console.log(x); // inside
 ```
 
-Uh oh! x outside the function was overwritten by x inside the function because we didn’t specify that x was to be scoped only to foo!
+x outside the function was overwritten by x inside the function because we didn’t specify that x was to be scoped only to foo!
 
 #### Hoisting Best Practices
 
@@ -114,7 +117,10 @@ if (true) {
 i; // 0
 ```
 
-Even though i was assigned to 1 in the if block, that assignment was local to the block and therefore our “global” i was still 0. let prevents variables from being overwritten accidentally!
+Even though i was assigned to 1 in the if block, that assignment was local to the block and therefore our “global” i was still 0.
+let prevents variables from being overwritten accidentally!
+
+Link: [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)
 
 ### const
 
@@ -145,3 +151,5 @@ obj.i; // 1
 ```
 
 Many have completely stopped using var, opting to use const for variables that won’t change and let otherwise. These new keywords provide more specific scope → less errors and improved readability/maintainability.
+
+Link: [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)

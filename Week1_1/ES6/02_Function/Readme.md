@@ -29,3 +29,5 @@ const greetings = name => `hello ${name}`;
 This is some code reduction we are talking about earlier. In ES6 if your function has a single parameter then you can altogether ditch the parenthesis around the parameter.
 
 Another thing to notice that we don’t have to write the return keyword to return the computed value, in ES6 if you don’t write function body inside braces the computed expression automatically get returned when the function will be executed.
+
+Link: [MDN](https://developer.mozilla.org/hu/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
