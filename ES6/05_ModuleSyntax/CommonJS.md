@@ -176,3 +176,45 @@ This is typically only a reasonable thing to do if you are importing polyfills a
 <script src="//cdn.jsdelivr.net/polyfills/shim.js"></script>
 <script src="startup.js"></script>
 ```
+
+## Public / Private State
+
+One of the great parts about CommonJS is that everything is private except for what is set to `module.exports`. That means that we can separate our public api and private helpers quite easily:
+
+```javascript
+function buttonClick(event) {}
+
+var Page = {
+	onDomLoaded: function() {
+		var ele = document.getElementById('myButton');
+		ele.addEventListener('click', buttonClick);
+	},
+};
+
+module.exports = Page;
+```
+
+```javascript
+var page = require('./page');
+
+assert.equal(typeof page.onDomLoaded, 'function');
+assert.equal(typeof buttonClick, 'undefined');
+```
+
+Simply don’t export the things you don’t want to have be public, and they won’t be accessible!
+
+## Conclusion
+
+Specifying dependencies using CommonJS enables us to work on individual units of code and better reason about the environment they are being run in. By explicitly stating the dependencies for each file we don’t need to maintain an ordered list of our files and can instead let our tools figure that out for us.
+
+Writing our JavaScript in this way lets us be more explicit about what API modules provide while hiding their implementation. Our engineering team at Wealthfront has found the developer productivity gains and ease of testing invaluable with CommonJS and thinks you will too.
+
+## Read More
+
+The CommonJS module syntax is the key behind reusable JavaScript code and is utilized by a large number of tools. Node uses CommonJS by default, and NPM is a package manager for people to distribute and share packages of CommonJS modules.
+
+Browserify and Webpack are both bundlers which can be given a CommonJS module. They will walk the dependency tree of requires and bundle all of the files’ dependencies into a single file (generally) that is then meant to be used on websites. Ben Clinkinbeard has written a [great post](http://benclinkinbeard.com/posts/how-browserify-works/) explaining how Browserify works with CommonJS.
+
+## Source
+
+[http://eng.wealthfront.com/2015/06/16/an-introduction-to-commonjs/](http://eng.wealthfront.com/2015/06/16/an-introduction-to-commonjs/)
