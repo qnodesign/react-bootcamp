@@ -77,6 +77,41 @@ link: [more info](http://exploringjs.com/es6/ch_destructuring.html)
 
 link: [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
 
+## Default parameter
+
+Default function parameters allow formal parameters to be initialized with default values if no value or undefined is passed.
+
+ES5
+There are a lot of ways, here is a preferred method - it lets you pass in anything you want, including false or null. (typeof null == "object")
+
+```javascript
+function foo(a, b) {
+  a = typeof a !== 'undefined' ? a : 42;
+  b = typeof b !== 'undefined' ? b : 'default_b';
+  ...
+}
+```
+
+ES6
+
+```javascript
+function read_file(file, delete_after = false) {
+	// Code
+}
+```
+
+You can also [simulate default named parameters via destructuring](http://exploringjs.com/es6/ch_parameter-handling.html#sec_named-parameters):
+
+```javascript
+// the `= {}` below lets you call the function without any parameters
+function myFor({ start = 5, end = 1, step = -1 } = {}) { // (A)
+    // Use the variables `start`, `end` and `step` here
+    ···
+}
+```
+
+link: [MDN](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/default_parameters)
+
 ## Object initialization (Object Literal Property Value)
 
 We define a object like this in ES5
