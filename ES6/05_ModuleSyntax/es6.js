@@ -1,7 +1,3 @@
-//import
-
-import myModule from './myModule';
-
 //export
 
 const myModule = {
@@ -12,12 +8,16 @@ const myModule = {
 };
 export default myModule;
 
-//export import child
+//import
 
-export const x = 1;
-export const y = 2;
-export const z = 'String';
+import myModule from './myModule';
 
-//= >
+//export children
 
-import { x, y, z } from './myModule';
+export const module1 = { param: 1 };
+export const module2 = { param: 2 };
+export const module3 = { param: 3 };
+
+//import children
+
+import { module1, module2, module3 } from './myModule';
