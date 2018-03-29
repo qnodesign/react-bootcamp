@@ -12,14 +12,14 @@
 
 ### 12:30-15:00
 
-#ES6#
+**ES6**
 
 * how is ES6 standard works (ES-2018)
 * connect JSX syntax and explain how is it transformed (typescript)
 
 ### 15:15 - 17:45
 
-#ES6 Features#
+**ES6 Features**
 
 * 01_Variables
 * 02_Function
