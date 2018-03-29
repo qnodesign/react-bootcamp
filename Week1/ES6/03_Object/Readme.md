@@ -167,6 +167,6 @@ console.log(rest);
 // expected output: [30,40,50]
 ```
 
-link: [MDN](https://developer.mozilla.org/hu/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
-
 In the above example, theArgs would collect the third argument of the function (because the first one is mapped to a, and the second to b) and all the consecutive arguments.
+
+link: [MDN](https://developer.mozilla.org/hu/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
