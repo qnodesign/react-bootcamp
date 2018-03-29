@@ -1,4 +1,4 @@
-## Manipulating objects in ES6 vs ES5
+# Manipulating objects in ES6 vs ES5
 
 Objects get a major overhaul in ES6. Things like object destructuring and rest/spread operators made it working with objects very easy now. Let’s jump to the code and try to merge two objects in ES5.
 
@@ -8,7 +8,8 @@ var obj2 = { a: 2, c: 3, d: 4 };
 var obj3 = Object.assign(obj1, obj2);
 ```
 
-We have to merge the object using `Object.assign()` which takes both objects as input and outputs the merged object. Let’s take a look how we can tackle this problem in ES6.
+We have to merge the object using `Object.assign()` which takes both objects as input and outputs the merged object.
+In ES6 it can be done with the spread operator
 
 ```javascript
 const obj1 = { a: 1, b: 2 };
@@ -16,26 +17,61 @@ const obj2 = { a: 2, c: 3, d: 4 };
 const obj3 = { ...obj1, ...obj2 };
 ```
 
-Simple isn’t it ? The spread operator makes merging objects a breeze for the developer.
+## Destructing
 
-Let’s take a look at object destructuring now. If you have to extract multiple values from ES5 you have to write 3–4 lines of code like this:
-
-```javascript
-var obj1 = { a: 1, b: 2, c: 3, d: 4 };
-var a = obj1.a;
-var b = obj1.b;
-var c = obj1.c;
-var d = obj1.d;
-```
-
-Time consuming 😕. Oh wait! we have ES6 here to rescue us.
+### Object destructuring
 
 ```javascript
-const obj1 = { a: 1, b: 2, c: 3, d: 4 };
-const { a, b, c, d } = obj1;
+const obj = { first: 'Jane', last: 'Doe' };
 ```
 
-Cool! Last but not least look at another new feature for introduced for objects.
+ES5
+
+```javascript
+var first = obj.first;
+var last = obj.last;
+```
+
+ES6
+
+```javascript
+const { first: f, last: l } = obj;
+// f = 'Jane'; l = 'Doe'
+// {prop} is short for {prop: prop}
+const { first, last } = obj;
+// first = 'Jane'; last = 'Doe'
+```
+
+Destructuring helps with processing return values:
+
+```javascript
+const obj = { foo: 123 };
+
+const { writable, configurable } = Object.getOwnPropertyDescriptor(obj, 'foo');
+
+console.log(writable, configurable); // true true
+```
+
+### Array destructuring
+
+Array destructuring (works for all iterable values):
+
+```javascript
+const iterable = ['a', 'b'];
+const [x, y] = iterable; // x = 'a'; y = 'b'
+```
+
+Destructuring helps with processing return values:
+
+```javascript
+const [all, year, month, day] = /^(\d\d\d\d)-(\d\d)-(\d\d)$/.exec('2999-12-31');
+```
+
+### Destructing in detail
+
+[more info](http://exploringjs.com/es6/ch_destructuring.html)
+
+## Define object
 
 We define a object like this in ES5
 
@@ -59,7 +95,7 @@ var obj1 = { a, b, c, d };
 
 Yeah, if the name of the key and the variable we are going to assign to that key are same you can use this shorthand.
 
-### Rest operator:
+## Rest operator:
 
 If the last named argument of a function is prefixed with `...`, it becomes an array whose elements from 0 (inclusive) to theArgs.length (exclusive) are supplied by the actual arguments passed to the function.
 
