@@ -47,7 +47,7 @@ I believe that the above gives you a picture of what’s going on. Note that `st
 
 ### 1. Escaping HTML tags
 
-I suspect HTML escape was one of the first use cases that the designers of this feature had in mind. The following code is vulnerable to XSS attack, if `name` or `aboutme` are not sanitized:
+The following code is vulnerable to XSS attack, if `name` or `aboutme` are not sanitized:
 
 ```html
  <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/0.8.2/purify.min.js"></script>
@@ -67,22 +67,22 @@ I suspect HTML escape was one of the first use cases that the designers of this 
   </script>
 ```
 
-If it is not sanitized the `onload` will execute the javascript code after the image has been loaded, which is not desired right. So using tagged template literal we now can purify it with much cleaner code. Do checkout [common-tag](https://github.com/declandewet/common-tags) a popular library making use of tagged template literals extensively.
+If it is not sanitized the `onload` will execute the javascript code after the image has been loaded. It is now purified with template literal. [Common-tag](https://github.com/declandewet/common-tags) is a popular library making use of tagged template literals extensively.
 
 ### 2. Language translation and internationalization
 
-A handy library called [es2015-i18n-tag](https://github.com/skolmer/es2015-i18n-tag) uses tagged template literals to translate and localize texts. It allows you to write code that looks like this:
+A library called [es2015-i18n-tag](https://github.com/skolmer/es2015-i18n-tag) uses tagged template literals to translate and localize texts. It allows you to write code that looks like this:
 
 ```javascript
 console.log(i18n`Hello ${name}, you have ${amount}:c in your bank account.`);
 // Hallo Steffen, Sie haben US$ 1,250.33 auf Ihrem Bankkonto.
 ```
 
-What’s great here is that it automatically localizes currencies and date formats. Notice the `:c` after `${amount}` in the above literal automatically adds the dollar sign. You can also specify explicitly if the global currency is different.
+It automatically localizes currencies and date formats. Notice the `:c` after `${amount}` in the above literal automatically adds the dollar sign. You can also specify explicitly if the global currency is different.
 
 ### 3. Writing CSS in JXS
 
-Javascript developers are familiar with weird syntax for inline style (written as an object) in react, blah blah. Following is a react jsx snippet.
+This is how inline style is (written as an object) looks like in react. Following code is a react jsx snippet.
 
 ```jsx
 <section style={{ padding: 4em;  background: papayawhip; }}>
@@ -90,7 +90,8 @@ Javascript developers are familiar with weird syntax for inline style (written a
 </section>
 ```
 
-A library called [styled-components](https://github.com/styled-components/styled-components) aims to fix inline style in React using tagged template literals. Here’s what their code looks like for the above snippet, more cleaner
+A library called [styled-components](https://github.com/styled-components/styled-components) aims to fix inline style in React using tagged template literals.
+Here’s what their code looks like for the above snippet, more cleaner
 
 ```jsx
 import React from 'react';
@@ -118,7 +119,7 @@ const Wrapper = styled.section`
 </Wrapper>;
 ```
 
-Checkout their [Getting Started page](https://www.styled-components.com/docs/basics#getting-started), it has a ton of code examples and live playground to write your own styled components.
+Good examples can ba found in their [getting Started page](https://www.styled-components.com/docs/basics#getting-started), and live playground to write your own styled components.
 
 ## Bonus Points
 
@@ -137,14 +138,7 @@ tag`\unicode`;
 
 For more details regarding this do checkout the [ECMAScript proposal](https://tc39.github.io/proposal-template-literal-revision/).
 
-## Final Thoughts
-
-For a long time I felt that these tagged template literals had no, but as I found more libraries that use them I’m starting to change my mind. I believe you too would after reading this article. If you have other ideas or uses for tagged template literals, do share by leaving a comment.
-
-Will it remain an esoteric feature for some library authors or will we see it going mainstream? Still hard to tell. Happy hacking.
-
-Link: [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
-
 ## Source:
 
 [https://codeburst.io/javascript-es6-tagged-template-literals-a45c26e54761](https://codeburst.io/javascript-es6-tagged-template-literals-a45c26e54761)
+Link: [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
