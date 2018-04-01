@@ -45,7 +45,7 @@ I believe that the above gives you a picture of what’s going on. Note that `st
 
 ## Use cases
 
-### Escaping HTML tags
+### 1. Escaping HTML tags
 
 I suspect HTML escape was one of the first use cases that the designers of this feature had in mind. The following code is vulnerable to XSS attack, if `name` or `aboutme` are not sanitized:
 
@@ -90,6 +90,60 @@ Javascript developers are familiar with weird syntax for inline style (written a
 </section>
 ```
 
+A library called [styled-components](https://github.com/styled-components/styled-components) aims to fix inline style in React using tagged template literals. Here’s what their code looks like for the above snippet, more cleaner
+
 ## Source:
 
 [https://codeburst.io/javascript-es6-tagged-template-literals-a45c26e54761](https://codeburst.io/javascript-es6-tagged-template-literals-a45c26e54761)
+
+```jsx
+import React from 'react';
+
+import styled from 'styled-components';
+
+// Create a <Title> react component that renders an <h1> which is
+// centered, palevioletred and sized at 1.5em
+const Title = styled.h1`
+	font-size: 1.5em;
+	text-align: center;
+	color: palevioletred;
+`;
+
+// Create a <Wrapper> react component that renders a <section> with
+// some padding and a papayawhip background
+const Wrapper = styled.section`
+	padding: 4em;
+	background: papayawhip;
+`;
+
+// Use them like any other React component – except they're styled!
+<Wrapper>
+	<Title>Hello World, this is my first styled component!</Title>
+</Wrapper>;
+```
+
+Checkout their [Getting Started page](https://www.styled-components.com/docs/basics#getting-started), it has a ton of code examples and live playground to write your own styled components.
+
+## Bonus Points
+
+As of ES2016, tagged templates conform to the rules of the following escape sequences:
+
+* Unicode escapes started by “\u”, for example \u00A9
+* Unicode code point escapes indicated by “\u{}”, for example \u{2F804}
+* Hexadecimal escapes started by “\x”, for example \xA9
+* Octal literal escapes started by “\” and (a) digit(s), for example \251
+
+This means that a tagged template like the following is problematic, because, per ECMAScript grammar, a parser looks for valid Unicode escape sequences, but finds malformed syntax:
+
+````javascript
+tag`\unicode` //stg
+```
+
+For more details regarding this do checkout the [ECMAScript proposal](https://tc39.github.io/proposal-template-literal-revision/).
+
+## Final Thoughts
+
+For a long time I felt that these tagged template literals had no, but as I found more libraries that use them I’m starting to change my mind. I believe you too would after reading this article. If you have other ideas or uses for tagged template literals, do share by leaving a comment.
+
+Will it remain an esoteric feature for some library authors or will we see it going mainstream? Still hard to tell. Happy hacking.
+````
