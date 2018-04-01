@@ -92,10 +92,6 @@ Javascript developers are familiar with weird syntax for inline style (written a
 
 A library called [styled-components](https://github.com/styled-components/styled-components) aims to fix inline style in React using tagged template literals. Here’s what their code looks like for the above snippet, more cleaner
 
-## Source:
-
-[https://codeburst.io/javascript-es6-tagged-template-literals-a45c26e54761](https://codeburst.io/javascript-es6-tagged-template-literals-a45c26e54761)
-
 ```jsx
 import React from 'react';
 
@@ -147,6 +143,6 @@ For a long time I felt that these tagged template literals had no, but as I foun
 
 Will it remain an esoteric feature for some library authors or will we see it going mainstream? Still hard to tell. Happy hacking.
 
-```
+## Source:
 
-```
+[https://codeburst.io/javascript-es6-tagged-template-literals-a45c26e54761](https://codeburst.io/javascript-es6-tagged-template-literals-a45c26e54761)
