@@ -1,7 +1,10 @@
 import { alpha, beta } from './childModule_es6';
 
+const testVariable = 'test';
+
 const initObj = {
-	a: 'test',
+	// template
+	a: `test: ${testVariable}`,
 	b: test => test || 'empty',
 	c: 'c',
 	d: 'd',

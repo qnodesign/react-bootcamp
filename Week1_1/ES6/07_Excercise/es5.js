@@ -2,8 +2,10 @@
 
 var _childModule_es = require('./childModule_es6');
 
+var testVariable = 'test';
+
 var initObj = {
-	a: 'test',
+	a: 'test' + testVariable,
 	// arrow func
 	b: function b(test) {
 		return test || 'empty';
