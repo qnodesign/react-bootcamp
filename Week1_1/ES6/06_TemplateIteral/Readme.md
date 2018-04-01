@@ -142,5 +142,10 @@ For more details regarding this do checkout the [ECMAScript proposal](https://tc
 
 ## Source:
 
-[https://codeburst.io/javascript-es6-tagged-template-literals-a45c26e54761](https://codeburst.io/javascript-es6-tagged-template-literals-a45c26e54761)
+* Main source: [https://codeburst.io/javascript-es6-tagged-template-literals-a45c26e54761](https://codeburst.io/javascript-es6-tagged-template-literals-a45c26e54761)
+* [Common-tag - https://github.com/declandewet/common-tags](https://github.com/declandewet/common-tags)
+* [es2015-i18n-tag - https://github.com/skolmer/es2015-i18n-tag](https://github.com/skolmer/es2015-i18n-tag)
+* [styled-components - https://github.com/styled-components/styled-components](https://github.com/styled-components/styled-components)
+* [ECMAScript proposal - https://tc39.github.io/proposal-template-literal-revision/](https://tc39.github.io/proposal-template-literal-revision/)
+
 Link: [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
