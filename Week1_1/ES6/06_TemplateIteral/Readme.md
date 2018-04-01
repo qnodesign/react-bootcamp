@@ -3,9 +3,9 @@
 The ES6 template literal syntax is simply `(Template literals are enclosed by the back-tick (`) (grave accent) character instead of double or single quotes).
 Template literals can contain placeholders. These are indicated by the dollar sign and curly braces (${expression}).
 
-## `` `Tagged ${template} literals` ``
+Let's have an experiment with an interesting approach:
 
-## Definition
+## `` `Tagged ${template} literals` ``
 
 _If there is an expression(custom handler function) preceding the template literal then it is called a "tagged template"._
 
