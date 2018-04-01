@@ -79,3 +79,17 @@ console.log(i18n`Hello ${name}, you have ${amount}:c in your bank account.`);
 ```
 
 What’s great here is that it automatically localizes currencies and date formats. Notice the `:c` after `${amount}` in the above literal automatically adds the dollar sign. You can also specify explicitly if the global currency is different.
+
+### 3. Writing CSS in JXS
+
+Javascript developers are familiar with weird syntax for inline style (written as an object) in react, blah blah. Following is a react jsx snippet.
+
+```jsx
+<section style={{ padding: 4em;  background: papayawhip; }}>
+  <h1 style={{  font-size: 1.5em;  text-align: center;  color: palevioletred; }}>  Hello World, this is my first styled component!</h1>
+</section>
+```
+
+## Source:
+
+[https://codeburst.io/javascript-es6-tagged-template-literals-a45c26e54761](https://codeburst.io/javascript-es6-tagged-template-literals-a45c26e54761)
