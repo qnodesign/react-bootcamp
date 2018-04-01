@@ -143,6 +143,8 @@ For a long time I felt that these tagged template literals had no, but as I foun
 
 Will it remain an esoteric feature for some library authors or will we see it going mainstream? Still hard to tell. Happy hacking.
 
+Link: [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
+
 ## Source:
 
 [https://codeburst.io/javascript-es6-tagged-template-literals-a45c26e54761](https://codeburst.io/javascript-es6-tagged-template-literals-a45c26e54761)
