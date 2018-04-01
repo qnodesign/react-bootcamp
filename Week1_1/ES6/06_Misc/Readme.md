@@ -135,8 +135,8 @@ As of ES2016, tagged templates conform to the rules of the following escape sequ
 
 This means that a tagged template like the following is problematic, because, per ECMAScript grammar, a parser looks for valid Unicode escape sequences, but finds malformed syntax:
 
-````javascript
-tag`\unicode` //stg
+```javascript
+tag`\unicode`;
 ```
 
 For more details regarding this do checkout the [ECMAScript proposal](https://tc39.github.io/proposal-template-literal-revision/).
@@ -146,4 +146,7 @@ For more details regarding this do checkout the [ECMAScript proposal](https://tc
 For a long time I felt that these tagged template literals had no, but as I found more libraries that use them I’m starting to change my mind. I believe you too would after reading this article. If you have other ideas or uses for tagged template literals, do share by leaving a comment.
 
 Will it remain an esoteric feature for some library authors or will we see it going mainstream? Still hard to tell. Happy hacking.
-````
+
+```
+
+```
