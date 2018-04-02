@@ -50,16 +50,16 @@ for await (const line of readLines(filePath)){
 A typical use case is to hide a spinner after a `fetch()` request: instead of duplicating the logic inside the last `.then()` and `.catch()`, one can now place it inside `.finally()`
 
 ```javascript
-fetch('http://exapmle.com/endpoint)
-    .then(result => {
-      // …
-    })
-    .catch(err => {
-      // …
-    })
-    .finally(() => {
-      // …
-    });
+fetch('http://exapmle.com/endpoint')
+	.then(result => {
+		// …
+	})
+	.catch(err => {
+		// …
+	})
+	.finally(() => {
+		// …
+	});
 ```
 
 ## RegExp related features
