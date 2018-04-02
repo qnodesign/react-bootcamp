@@ -19,12 +19,12 @@
 
 ### 15:15 - 17:45
 
-**ES6 Features**
+**E[S6 Features](ES6)**
 
 * [01_Variables](ES6/01_Variables)
-* [02_Function]()
-* [03_Object]()
-* [04_Promises]()
-* [05_ModuleSyntax]()
-* [06_TemplateLiteral]()
-* [07_Excercise]()
+* [02_Function](ES6/02_Function)
+* [03_Object](ES6/03_Object)
+* [04_Promises](ES6/04_Promises)
+* [05_ModuleSyntax](ES6/05_ModuleSyntax)
+* [06_TemplateLiteral](ES6/06_TemplateLiteral)
+* [07_Excercise](ES6/07_Excercise)
