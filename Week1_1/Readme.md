@@ -26,4 +26,5 @@
 * 03_Object
 * 04_Promises
 * 05_ModuleSyntax
-* 06_Excercise
+* 06_TemplateLiteral
+* 07_Excercise
