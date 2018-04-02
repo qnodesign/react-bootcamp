@@ -21,10 +21,10 @@
 
 **ES6 Features**
 
-* 01_Variables
-* 02_Function
-* 03_Object
-* 04_Promises
-* 05_ModuleSyntax
-* 06_TemplateLiteral
-* 07_Excercise
+* [01_Variables](ES6/01_Variables)
+* [02_Function]()
+* [03_Object]()
+* [04_Promises]()
+* [05_ModuleSyntax]()
+* [06_TemplateLiteral]()
+* [07_Excercise]()
