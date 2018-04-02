@@ -15,7 +15,8 @@
 **[ES6 or ECMAScript® 2015](ES6)**
 
 * how is [ES6 standard or ECMAScript® 2015 Language Specification](http://www.ecma-international.org/ecma-262/6.0/) works
-* connect [JSX](JSX) syntax and explain how is it transformed (typescript)
+* connect [JSX](JSX) syntax and explain how is it transformed
+* Brief introduction to [Typescript](Typescript)
 
 ### 15:15 - 17:45
 
