@@ -75,9 +75,9 @@ More info on these features can be found at Mathias Bynens — one of the dr
 
 ## Other new Features
 
-To top it off [a tweak to template literals](https://github.com/tc39/proposal-template-literal-revision) landed: when using tagged template literals the restriction on escape sequences are removed, thus allowing things like \xerxes. Before this tweak an error would be thrown because \x is the start of a hex escape with erxes not being a valid hex value.
+To top it off [a tweak to template literals](https://github.com/tc39/proposal-template-literal-revision) landed: when using **tagged template literals** the restriction on escape sequences are removed, thus allowing things like \xerxes. Before this tweak an error would be thrown because \x is the start of a hex escape with erxes not being a valid hex value.
 
-[Feature in details](06_TemplateLiteral)
+[Tagged template literals in details](06_TemplateLiteral)
 
 ## Sources:
 

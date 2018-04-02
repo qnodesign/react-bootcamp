@@ -12,14 +12,14 @@
 
 ### 12:30-15:00
 
-**[ES6](ES6)**
+**[ES6 or ECMAScript® 2015](ES6)**
 
-* how is [ES6 standard](ES6/01_ES6Standard) works (ES-2018)
-* connect JSX syntax and explain how is it transformed (typescript)
+* how is [ES6 standard or ECMAScript® 2015 Language Specification](http://www.ecma-international.org/ecma-262/6.0/) works
+* connect [JSX](JSX) syntax and explain how is it transformed (typescript)
 
 ### 15:15 - 17:45
 
-**[ES6 Features](ES6/Features)**
+**[ES latest features](ES6/Features)**
 
 * [01_Variables](ES6/Features/01_Variables)
 * [02_Function](ES6/Features/02_Function)
