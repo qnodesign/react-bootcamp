@@ -13,13 +13,13 @@ TypeScript actually looks much like modern JavaScript. At the most basic level, 
 
 ```javascript
 var name = “Susan”,
-		age = 25,
-		hasCode = true;
+    age = 25,
+    hasCode = true;
 ```
 
 We could write the following:
 
-```tsx
+```javascript
 let name: string = 'Susan',
 	age: number = 25,
 	hasCode: boolean = true;
